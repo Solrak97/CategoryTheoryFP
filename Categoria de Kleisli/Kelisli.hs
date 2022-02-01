@@ -1,6 +1,6 @@
 module Main where
 
--- base safe reciprocal
+
 safe_reciprocal :: Double -> Maybe Double
 safe_reciprocal x
     | x == 0    =   Nothing
@@ -19,6 +19,7 @@ safe_root_reciprocal x = case ( safe_reciprocal x ) of
     Just y -> case ( safe_root y ) of 
         Nothing -> Nothing
         Just z -> Just z
+
 
 main = do
     print (safe_reciprocal 0)
